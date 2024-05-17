@@ -1,11 +1,17 @@
+using SGMC.Test;
 using SGMC.Test.DB;
+using SGMC.Test.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
+builder.AddLogger();
+
+builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddPersistence(builder.Configuration);
+builder.Services
+    .AddPersistence(builder.Configuration)
+    .AddApplication();
 
 var app = builder.Build();
 
@@ -17,11 +23,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/weatherforecast", () =>
-{
-    return string.Empty;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+app.UseRouting();
+
+app.MapControllers();
 
 app.Run();
