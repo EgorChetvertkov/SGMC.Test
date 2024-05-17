@@ -13,10 +13,10 @@ internal sealed class LinkConfiguration : EntityTypeConfiguration<Link>
 
         builder.Property(x => x.Id).HasColumnName("link_id");
 
-        builder.Property(x => x.CountParents).IsRequired()
+        builder.Property(x => x.Quantity).IsRequired()
             .HasColumnName("count_parents");
         builder.Property(x => x.ParentId).IsRequired()
-            .HasColumnName("parent_id");
+            .HasColumnName("quantity");
         builder.Property(x => x.NomenclatureId).IsRequired()
             .HasColumnName("nomenclature_id");
 
@@ -26,6 +26,9 @@ internal sealed class LinkConfiguration : EntityTypeConfiguration<Link>
         builder.HasOne(x => x.Nomenclature)
             .WithMany(x => x.Parents)
             .HasForeignKey(x => x.NomenclatureId);
+
+        builder.HasIndex(x => new { x.ParentId, x.NomenclatureId })
+            .IsUnique().HasDatabaseName("UQ_links_parent_id_nomenclature_id");
 
         builder.ToTable("links", table =>
         {
