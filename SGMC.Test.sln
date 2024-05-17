@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGMC.Test.DB", "SGMC.Test.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGMC.Test.Application", "SGMC.Test.Application\SGMC.Test.Application.csproj", "{A34F3BCC-0E48-4FBF-9E48-4A700103A16B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGMC.Test.Test", "SGMC.Test.Test\SGMC.Test.Test.csproj", "{3DEEE922-FF29-479F-B341-F311AC9DC52D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0CEFA4BC-E6E5-43B2-B630-ACB454D6EBD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{A34F3BCC-0E48-4FBF-9E48-4A700103A16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A34F3BCC-0E48-4FBF-9E48-4A700103A16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A34F3BCC-0E48-4FBF-9E48-4A700103A16B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DEEE922-FF29-479F-B341-F311AC9DC52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DEEE922-FF29-479F-B341-F311AC9DC52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DEEE922-FF29-479F-B341-F311AC9DC52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DEEE922-FF29-479F-B341-F311AC9DC52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CEFA4BC-E6E5-43B2-B630-ACB454D6EBD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEFA4BC-E6E5-43B2-B630-ACB454D6EBD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CEFA4BC-E6E5-43B2-B630-ACB454D6EBD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEFA4BC-E6E5-43B2-B630-ACB454D6EBD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
