@@ -1,0 +1,6 @@
+@SGMC.Test_HostAddress = http://localhost:5126
+
+GET {{SGMC.Test_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
